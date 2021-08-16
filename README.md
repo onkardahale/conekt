@@ -5,7 +5,7 @@ Conekt simulates a browser login to work **without** an **API key**.
 
 ---
 ## Usage
-- [Download Conekt 1.0 jar file](https://github.com/onkardahale/conekt/blob/master/dist/conekt-1.0.jar)
+- [Download Conekt 1.0 jar file](https://github.com/onkardahale/conekt/raw/master/dist/conekt-1.0.jar)
 - To use Conekt in **Android**, you need to include jar file in the libs directory and add the following line in you module's gradle file ``` compile files('libs/conekt-1.0.jar') ```
 
 ---
