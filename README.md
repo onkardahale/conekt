@@ -13,7 +13,7 @@ Conekt simulates a browser login to work **without** an **API key**.
 
 ```java
 // Constructors are overloaded
-// Initializes Connect with no proxy and logging disabled.
+// Initializes Conekt with no proxy and logging disabled.
 Conekt conekt = new Conekt();
 
 // To enable logging and to pass proxy while initialization
