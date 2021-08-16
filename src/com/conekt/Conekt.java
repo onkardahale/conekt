@@ -42,7 +42,6 @@ import java.util.*;
  * Conekt was built from the official Java client for KiteConnect API
  * Be sure to import com.zerodhatech.* along with com.conekt.* to make use of Models and Constants from the official Client
  * 
- * It offers all the functionality like placing order, fetch margins, orderbook, positions, fetch market snap quote.
  * Follow the official documentation for Java client to use Conekt.
  */
 public class Conekt {
@@ -117,7 +116,7 @@ public class Conekt {
   		            cookieStore.put(url.host(), cookies);
   		            for(Cookie cookie:cookies)
   		            {
-  		            	if(!"enctoken".equals(cookie.value()))
+  		            	if("enctoken".equals(cookie.value()))
   		            	{
   		            		Conekt.enctoken = cookie.value();
   		            	}
@@ -215,12 +214,12 @@ public class Conekt {
   			
   			if(j.has("message"))
   			{
-  				message = j.get("message").getAsString();
+  				message = "{message: " + j.get("message").getAsString() + "}";
   			}
   		}
   		catch(IOException e)
   		{
-  			return "{message: " + message + "}";
+  			return message;
   		}
 		return null;
 
