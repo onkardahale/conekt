@@ -81,8 +81,7 @@ public class conektRequestHandler
     /** Makes a GET request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
      * @throws JSONException is thrown for parsing errors.*/
@@ -96,8 +95,7 @@ public class conektRequestHandler
     /** Makes a GET request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of params which has to be sent as query params.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
@@ -112,8 +110,7 @@ public class conektRequestHandler
     /** Makes a POST request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of params which has to be sent in the body.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
@@ -127,8 +124,7 @@ public class conektRequestHandler
 
     /** Make a JSON POST request.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param jsonArray is the JSON array of params which has to be sent in the body.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
@@ -144,8 +140,7 @@ public class conektRequestHandler
     /** Makes a PUT request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of params which has to be sent in the body.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
@@ -160,8 +155,7 @@ public class conektRequestHandler
     /** Makes a DELETE request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of params which has to be sent in the query params.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
@@ -176,8 +170,7 @@ public class conektRequestHandler
     /** Makes a GET request.
      * @return JSONObject which is received by Kite Trade.
      * @param url is the endpoint to which request has to be sent.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param commonKey is the key that has to be sent in query param for quote calls.
      * @param values is the values that has to be sent in query param like 265, 256265, NSE:INFY.
      * @throws IOException is thrown when there is a connection related error.
@@ -194,8 +187,7 @@ public class conektRequestHandler
     /** Makes GET request to fetch CSV dump.
      * @return String which is received from server.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @throws IOException is thrown when there is a connection related error.
      * @throws KiteException is thrown for all Kite Trade related errors.
      * */
@@ -208,8 +200,7 @@ public class conektRequestHandler
 
     /** Creates a GET request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * */
     public Request createGetRequest(String url, String enctoken ) {
         HttpUrl.Builder httpBuilder = HttpUrl.parse(url).newBuilder();
@@ -218,8 +209,7 @@ public class conektRequestHandler
 
     /** Creates a GET request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of data that has to be sent in query params.
      * */
     public Request createGetRequest(String url, Map<String, Object> params, String enctoken ) {
@@ -232,8 +222,7 @@ public class conektRequestHandler
 
     /** Creates a GET request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param commonKey is the key that has to be sent in query param for quote calls.
      * @param values is the values that has to be sent in query param like 265, 256265, NSE:INFY.
      * */
@@ -247,8 +236,7 @@ public class conektRequestHandler
 
     /** Creates a POST request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of data that has to be sent in the body.
      * */
     public Request createPostRequest(String url, Map<String, Object> params, String enctoken ) {
@@ -264,8 +252,7 @@ public class conektRequestHandler
 
     /** Create a POST request with body type JSON.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param jsonArray is the JSONArray of data that has to be sent in the body.
      * */
     public Request createJsonPostRequest(String url, JSONArray jsonArray, Map<String, Object> queryParams, String enctoken ) {
@@ -306,8 +293,7 @@ public class conektRequestHandler
 
     /** Creates a PUT request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of data that has to be sent in the body.
      * */
     public Request createPutRequest(String url, Map<String, Object> params, String enctoken ){
@@ -322,8 +308,7 @@ public class conektRequestHandler
 
     /** Creates a DELETE request.
      * @param url is the endpoint to which request has to be done.
-     * @param enctoken is the api key of the Kite Connect app.
-     * @param accessToken is the access token obtained after successful login process.
+     * @param enctoken is a token generated after login.
      * @param params is the map of data that has to be sent in the query params.
      * */
     public Request createDeleteRequest(String url, Map<String, Object> params, String enctoken ){
